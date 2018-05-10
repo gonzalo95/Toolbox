@@ -188,3 +188,20 @@ int esSoloLetras(char str[])
    }
    return 1;
 }
+
+int obtenerId(ePropietario* lista, int len)
+{
+    int i;
+    int maxId = -1;
+    int retorno;
+    for(i = 0; i < len; i++)
+    {
+        if(lista[i].estado == 1 )
+        {
+            if(lista[i].id > maxId || maxId == -1)
+                maxId = lista[i].id;
+        }
+    retorno = maxId + 1;
+    }
+    return retorno;
+}
