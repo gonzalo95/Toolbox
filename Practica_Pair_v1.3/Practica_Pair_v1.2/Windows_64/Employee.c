@@ -34,22 +34,27 @@ Employee* employee_new(void)
 
 void employee_delete(Employee* this)
 {
-
-
+    if(this != NULL)
+        this->isEmpty = 0;
 }
 
 int employee_setId(Employee* this, int id)
 {
+    if(this != NULL)
+    {
+
+    }
+        this->id = id;
 
     return 0;
-
 }
 
 int employee_getId(Employee* this)
 {
+    if(this != NULL)
+        return this->id;
 
     return 0;
-
 }
 
 
