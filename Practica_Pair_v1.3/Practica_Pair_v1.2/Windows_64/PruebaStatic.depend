@@ -70,3 +70,29 @@
 	"ArrayList.h"
 	"Employee.h"
 
+1528569338 source:c:\users\planta alta\desktop\toolbox\practica_pair_v1.3\practica_pair_v1.2\windows_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528569338 c:\users\planta alta\desktop\toolbox\practica_pair_v1.3\practica_pair_v1.2\windows_64\arraylist.h
+
+1528569338 c:\users\planta alta\desktop\toolbox\practica_pair_v1.3\practica_pair_v1.2\windows_64\employee.h
+
+1528589159 source:c:\users\planta alta\desktop\toolbox\practica_pair_v1.3\practica_pair_v1.2\windows_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1528589394 source:c:\users\planta alta\desktop\toolbox\practica_pair_v1.3\practica_pair_v1.2\windows_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ArrayList.h"
+	"Employee.h"
+

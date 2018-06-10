@@ -17,6 +17,85 @@
 
 int main()
 {
+    ArrayList* lista = al_newArrayList();
+
+    int i;
+    int len;
+    Employee* pAux;
+
+    if(lista == NULL)
+    {
+        printf("Error al crear ArrayList\n");
+        return -1;
+    }
+    FILE* pData = fopen("data.csv", "r");
+    int opcion;
+
+    do
+    {
+        printf("\nMENU:\n");
+        printf("1. Parse del archivo data.csv\n");
+        printf("2. Listar Empleados\n");
+        printf("3. Ordenar por nombre\n");
+        printf("4. Agregar un elemento\n");
+        printf("5. Elimina un elemento\n");
+        printf("6. Listar Empleados (Desde/Hasta)\n");
+        printf("7. Salir\n");
+
+        scanf("%d", &opcion);
+
+        switch(opcion)
+        {
+        case 1:
+            if(pData != NULL)
+            {
+                parserEmployee(pData, lista);
+                printf("Archivo cargado satisfactoriamente\n");
+            }
+            else
+                printf("Archivo inexistente\n");
+
+            break;
+
+        case 2:
+            //int i;
+            //int len = al_len(lista);
+            //Employee* pAux;
+            len = al_len(lista);
+            for(i = 0; i < len; i++)
+            {
+                pAux = al_get(lista, i);
+                employee_print(pAux);
+            }
+
+            break;
+
+        case 3:
+            break;
+
+        case 4:
+            break;
+
+        case 5:
+            break;
+
+        case 6:
+            break;
+
+        case 7:
+            printf("Programa finalizado\n");
+            break;
+
+        default:
+            printf("Opcion invalida\n");
+            break;
+        }
+    }
+    while(opcion != 7);
+
+
+
+    /*
     int i;
     Employee* auxE;
     ArrayList* lista;
@@ -54,5 +133,7 @@ int main()
         auxE = (Employee*)al_get(lista, i);
         employee_print(auxE);
     }
+    */
+
     return 0;
 }
