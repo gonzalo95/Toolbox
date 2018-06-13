@@ -34,6 +34,15 @@ Employee* employee_new(void);
 void employee_delete(Employee* this);
 int employee_setId(Employee* this, int id);
 int employee_getId(Employee* this);
+
+int employee_setName(Employee* this, char*);
+char* employee_getName(Employee* this);
+
+int employee_setLastName(Employee* this, char*);
+char* employee_getLastName(Employee* this);
+
+int employee_setIsEmpty(Employee* this, int);
+int employee_getIsEmpty(Employee* this);
 #endif // _EMPLOYEE_H
 
 
