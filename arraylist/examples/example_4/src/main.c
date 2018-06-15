@@ -57,23 +57,12 @@ int main(void)
         al_push(lista,i , &a[i]);
     }
 
-    resultado = al_pop(lista, al_len(lista)-1);
-    printf("\n-- %d --\n", *resultado);
-    resultado = al_pop(lista, al_len(lista)-1);
-    printf("\n-- %d --\n", *resultado);
-    resultado = al_pop(lista, al_len(lista)-1);
-    printf("\n-- %d --\n", *resultado);
-    resultado = al_pop(lista, al_len(lista)-1);
-    printf("\n-- %d --\n", *resultado);
-    resultado = al_pop(lista, al_len(lista)-1);
-    printf("\n-- %d --\n", *resultado);
-*/
+    al_remove(lista, 2);
 
-/*
-    for(i = al_len(lista) -1; i >= 0; i--)
+    for(i = 0 ; i < al_len(lista); i++)
     {
-        resultado = al_pop(lista, i);
-        printf("\n-- %d --\n", *resultado);
+        resultado = al_get(lista, i);
+        if(resultado != NULL)printf("\n-- %d --\n", *resultado);
     }
 */
 
