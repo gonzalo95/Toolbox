@@ -28,6 +28,7 @@
 
 int main(void)
 {
+
         startTesting(1);
         startTesting(2);
         startTesting(3);
@@ -46,6 +47,24 @@ int main(void)
         startTesting(16);
         startTesting(17);
 
+/*
+    ArrayList* lista = al_newArrayList();
+    int a=1;
+    int b = 2;
+    int i;
+    int *resultado;
+    for(i = 0; i < 4; i++)
+    {
+        al_push(lista,i ,&a);
+    }
+    al_push(lista, 4, &b);
+    for(i = 0; i < al_len(lista); i++)
+    {
+        resultado = al_get(lista, i);
+        printf("\n-- %d --\n", *resultado);
+    }
+
+*/
     return 0;
 }
 
