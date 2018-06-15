@@ -49,22 +49,34 @@ int main(void)
 
 /*
     ArrayList* lista = al_newArrayList();
-    int a=1;
-    int b = 2;
+    int a[] = {1, 2, 3, 4, 5};
     int i;
     int *resultado;
-    for(i = 0; i < 4; i++)
+    for(i = 0; i < 5; i++)
     {
-        al_push(lista,i ,&a);
-    }
-    al_push(lista, 4, &b);
-    for(i = 0; i < al_len(lista); i++)
-    {
-        resultado = al_get(lista, i);
-        printf("\n-- %d --\n", *resultado);
+        al_push(lista,i , &a[i]);
     }
 
+    resultado = al_pop(lista, al_len(lista)-1);
+    printf("\n-- %d --\n", *resultado);
+    resultado = al_pop(lista, al_len(lista)-1);
+    printf("\n-- %d --\n", *resultado);
+    resultado = al_pop(lista, al_len(lista)-1);
+    printf("\n-- %d --\n", *resultado);
+    resultado = al_pop(lista, al_len(lista)-1);
+    printf("\n-- %d --\n", *resultado);
+    resultado = al_pop(lista, al_len(lista)-1);
+    printf("\n-- %d --\n", *resultado);
 */
+
+/*
+    for(i = al_len(lista) -1; i >= 0; i--)
+    {
+        resultado = al_pop(lista, i);
+        printf("\n-- %d --\n", *resultado);
+    }
+*/
+
     return 0;
 }
 

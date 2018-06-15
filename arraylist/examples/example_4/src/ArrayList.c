@@ -183,7 +183,7 @@ int al_set(ArrayList* this, int index,void* pElement)
 int al_remove(ArrayList* this,int index)
 {
     if(this == NULL || this->size <= index) return -1;
-    free(this->pElements[index]);
+    this->pElements[index] = NULL;
     this->size--;
     return 0;
 }
@@ -369,7 +369,7 @@ int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
             switch(order)
             {
             case 1:
-                if(pFunc(this->pElements[i], this->pElements[i]) == -1)
+                if(pFunc(this->pElements[i], this->pElements[j]) == 1)
                 {
                     aux = this->pElements[i];
                     this->pElements[i] = this->pElements[j];
@@ -378,7 +378,7 @@ int al_sort(ArrayList* this, int (*pFunc)(void* ,void*), int order)
                 break;
 
             case 0:
-                if(pFunc(this->pElements[i], this->pElements[i]) == 1)
+                if(pFunc(this->pElements[i], this->pElements[j]) == -1)
                 {
                     aux = this->pElements[j];
                     this->pElements[j] = this->pElements[i];
